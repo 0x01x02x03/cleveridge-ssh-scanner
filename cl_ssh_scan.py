@@ -72,7 +72,7 @@ def func_scanhost(ip, logloc):
             try: # try to connect
                s = pxssh.pxssh()
                s.login (hostname, usr, pwd)
-               s.sendline ('uptime')   # run a command
+               s.sendline ('uptime')   # run a command - EDIT
                s.prompt()              # match the prompt
                print "@ %s     SUCCESS ***********" % (ip)
                print s.before          # print everything before the prompt.
